@@ -304,18 +304,44 @@ const Map<String, dynamic> dataSET = {
     {
       'name': 'Grilled Chicken',
       'image': null,
-      'rating': 4.5,
+      'rating': 4.7,
       'detail': null,
-      'price': 250,
+      'price': 550,
       'menu': {'name': 'Proteins', 'image': null}
     },
+
+    // THIRST QUENCHERS
     {
-      'name': 'Grilled Chicken',
+      'name': 'Water',
+      'image': null,
+      'rating': 4.7,
+      'detail': null,
+      'price': 200,
+      'menu': {'name': 'Drinks', 'image': null}
+    },
+    {
+      'name': 'Pepsi/Mirinda',
       'image': null,
       'rating': 4.5,
       'detail': null,
       'price': 250,
-      'menu': {'name': 'Proteins', 'image': null}
+      'menu': {'name': 'Drinks', 'image': null}
+    },
+    {
+      'name': 'Coke/Fanta/Sprite',
+      'image': null,
+      'rating': 4.5,
+      'detail': null,
+      'price': 250,
+      'menu': {'name': 'Drinks', 'image': null}
+    },
+    {
+      'name': 'Chapman',
+      'image': null,
+      'rating': 4.5,
+      'detail': null,
+      'price': 400,
+      'menu': {'name': 'Drinks', 'image': null}
     },
   ]
 };
