@@ -338,7 +338,15 @@ const Map<String, dynamic> dataSET = {
     {
       'name': 'Chapman',
       'image': null,
-      'rating': 4.5,
+      'rating': 4.6,
+      'detail': null,
+      'price': 400,
+      'menu': {'name': 'Drinks', 'image': null}
+    },
+    {
+      'name': 'Hollandia',
+      'image': null,
+      'rating': 4.7,
       'detail': null,
       'price': 400,
       'menu': {'name': 'Drinks', 'image': null}
