@@ -39,7 +39,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Pap',
       'image': Constants.mealImages + 'pap.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 300,
       'menu': breakFastMenu
     },
@@ -47,7 +47,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Akara',
       'image': Constants.mealImages + 'akara.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 100,
       'menu': breakFastMenu
     },
@@ -55,7 +55,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Custard',
       'image': Constants.mealImages + 'custard.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 300,
       'menu': breakFastMenu
     },
@@ -63,7 +63,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Boiled Yam',
       'image': Constants.mealImages + 'boiled_yam.jpg',
       'rating': 4.3,
-      'detail': null,
+      'detail': Constants.details,
       'price': 700,
       'menu': breakFastMenu
     },
@@ -71,7 +71,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Yam Fries',
       'image': Constants.mealImages + 'yam_fries.jpg',
       'rating': 4.4,
-      'detail': null,
+      'detail': Constants.details,
       'price': 750,
       'menu': breakFastMenu
     },
@@ -79,7 +79,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Boiled Plantain',
       'image': Constants.mealImages + 'boiled_plantain.jpg',
       'rating': 4.4,
-      'detail': null,
+      'detail': Constants.details,
       'price': 550,
       'menu': breakFastMenu
     },
@@ -87,7 +87,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Toast Bread',
       'image': Constants.mealImages + 'toast_bread.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 200,
       'menu': breakFastMenu
     },
@@ -97,7 +97,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Village Rice',
       'image': Constants.mealImages + 'village_rice.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 700,
       'menu': mainDishMenu
     },
@@ -105,7 +105,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Jollof Rice',
       'image': Constants.mealImages + 'jollof_rice.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 750,
       'menu': mainDishMenu
     },
@@ -113,7 +113,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Spaghetti',
       'image': Constants.mealImages + 'spaghetti.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 500,
       'menu': mainDishMenu
     },
@@ -121,7 +121,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'White Rice',
       'image': Constants.mealImages + 'white_rice.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 700,
       'menu': mainDishMenu
     },
@@ -129,7 +129,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Coconut Rice',
       'image': Constants.mealImages + 'coconut_rice.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 750,
       'menu': mainDishMenu
     },
@@ -137,7 +137,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Fried Rice',
       'image': Constants.mealImages + 'fried_rice.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 700,
       'menu': mainDishMenu
     },
@@ -145,7 +145,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Rice & Beans',
       'image': Constants.mealImages + 'rice_beans.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 700,
       'menu': mainDishMenu
     },
@@ -155,7 +155,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Plantain (Dodo)',
       'image': Constants.mealImages + 'fried_plantain.png',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 50,
       'menu': extrasMenu
     },
@@ -163,7 +163,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Moi Moi',
       'image': Constants.mealImages + 'moimoi.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': extrasMenu
     },
@@ -171,7 +171,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Boiled Egg',
       'image': Constants.mealImages + 'boiled_egg.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': extrasMenu
     },
@@ -179,7 +179,7 @@ const Map<String, dynamic> dataSET = {
     //   'name': 'Fried Egg',
     //   'image': Constants.mealImages + 'fried_rice.jpg',
     //   'rating': 4.6,
-    //   'detail': null,
+    //   'detail': Constants.details,
     //   'price': 200,
     //   'menu': extrasMenu
     // },
@@ -187,7 +187,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Salad',
       'image': Constants.mealImages + 'salad.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 300,
       'menu': extrasMenu
     },
@@ -197,7 +197,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Egusi',
       'image': Constants.mealImages + 'egusi.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 200,
       'menu': soupsMenu
     },
@@ -205,7 +205,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Afang',
       'image': Constants.mealImages + 'afang.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': soupsMenu
     },
@@ -213,7 +213,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Edikaikong',
       'image': Constants.mealImages + 'edikaikong.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 200,
       'menu': soupsMenu
     },
@@ -221,7 +221,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Ofada Sauce',
       'image': Constants.mealImages + 'ofada_sauce.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 100,
       'menu': soupsMenu
     },
@@ -229,7 +229,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Efo riro',
       'image': Constants.mealImages + 'efo_riro.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 200,
       'menu': soupsMenu
     },
@@ -237,7 +237,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Ewedu',
       'image': Constants.mealImages + 'ewedu.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 100,
       'menu': soupsMenu
     },
@@ -247,7 +247,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Eba',
       'image': Constants.mealImages + 'eba.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': swallowMenu
     },
@@ -255,7 +255,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Amala',
       'image': Constants.mealImages + 'amala.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': swallowMenu
     },
@@ -263,7 +263,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Semo',
       'image': Constants.mealImages + 'semo.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': swallowMenu
     },
@@ -271,7 +271,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Wheat',
       'image': Constants.mealImages + 'wheat.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 150,
       'menu': swallowMenu
     },
@@ -281,7 +281,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Panla Fish',
       'image': Constants.mealImages + 'panla.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': proteinMenu
     },
@@ -289,23 +289,23 @@ const Map<String, dynamic> dataSET = {
       'name': 'Fried Titus',
       'image': Constants.mealImages + 'titus.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': proteinMenu
     },
     // {
     //   'name': 'Smoked Fish',
-    //   'image': null,
+    //   'image': Constants.details,
     //   'rating': 4.6,
-    //   'detail': null,
+    //   'detail': Constants.details,
     //   'price': 250,
     //   'menu': proteinMenu
     // },
     // {
     //   'name': 'Panla Fish',
-    //   'image': null,
+    //   'image': Constants.details,
     //   'rating': 4.5,
-    //   'detail': null,
+    //   'detail': Constants.details,
     //   'price': 250,
     //   'menu': proteinMenu
     // },
@@ -313,7 +313,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Beef',
       'image': Constants.mealImages + 'beef.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': proteinMenu
     },
@@ -321,7 +321,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Assorted',
       'image': Constants.mealImages + 'assorted.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': proteinMenu
     },
@@ -329,7 +329,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Ogunfe (Goat Meat)',
       'image': Constants.mealImages + 'ogunfe.jpg',
       'rating': 4.8,
-      'detail': null,
+      'detail': Constants.details,
       'price': 500,
       'menu': proteinMenu
     },
@@ -337,7 +337,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Grilled Chicken',
       'image': Constants.mealImages + 'grilled_chicken.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 550,
       'menu': proteinMenu
     },
@@ -347,7 +347,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Water',
       'image': Constants.mealImages + 'water.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 200,
       'menu': drinksMenu
     },
@@ -355,7 +355,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Pepsi/Mirinda',
       'image': Constants.mealImages + 'pepsi.jpg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': drinksMenu
     },
@@ -363,7 +363,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Coke/Fanta/Sprite',
       'image': Constants.mealImages + 'malt.jpeg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': drinksMenu
     },
@@ -371,7 +371,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Malt',
       'image': Constants.mealImages + 'malt.jpeg',
       'rating': 4.5,
-      'detail': null,
+      'detail': Constants.details,
       'price': 250,
       'menu': drinksMenu
     },
@@ -379,7 +379,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Lucozade',
       'image': Constants.mealImages + 'lucozade.jpg',
       'rating': 4.6,
-      'detail': null,
+      'detail': Constants.details,
       'price': 400,
       'menu': drinksMenu
     },
@@ -387,7 +387,7 @@ const Map<String, dynamic> dataSET = {
       'name': 'Hollandia',
       'image': Constants.mealImages + 'hollandia.jpg',
       'rating': 4.7,
-      'detail': null,
+      'detail': Constants.details,
       'price': 400,
       'menu': drinksMenu
     },
