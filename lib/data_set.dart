@@ -1,12 +1,25 @@
 // DATA SET FOR THE MEALS
 
-const breakFastMenu = {'name': 'Breakfast', 'image': null};
-const mainDishMenu = {'name': 'Main Dish', 'image': null};
-const extrasMenu = {'name': 'Extras', 'image': null};
-const soupMenu = {'name': 'Soups', 'image': null};
-const swallowMenu = {'name': 'Swallows', 'image': null};
-const proteinMenu = {'name': 'Proteins', 'image': null};
-const drinksMenu = {'name': 'Drinks', 'image': null};
+// MENUS
+const extrasMenu = {'name': 'Extras', 'image': 'assets/images/menu/extras.png'};
+const soupMenu = {'name': 'Soups', 'image': 'assets/images/menu/soups.jpg'};
+const drinksMenu = {'name': 'Drinks', 'image': 'assets/images/menu/drinks.jpg'};
+const breakFastMenu = {
+  'name': 'Breakfast',
+  'image': 'assets/images/menu/breakfast.jpeg'
+};
+const mainDishMenu = {
+  'name': 'Main Dish',
+  'image': 'assets/images/menu/main_dish.jpg'
+};
+const swallowMenu = {
+  'name': 'Swallows',
+  'image': 'assets/images/menu/swallows.jpg'
+};
+const proteinMenu = {
+  'name': 'Proteins',
+  'image': 'assets/images/menu/proteins.jpg'
+};
 
 const Map<String, dynamic> dataSET = {
   'meal': [
