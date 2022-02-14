@@ -199,7 +199,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.7,
       'detail': null,
       'price': 200,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
     {
       'name': 'Afang',
@@ -207,7 +207,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.6,
       'detail': null,
       'price': 150,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
     {
       'name': 'Edikaikong',
@@ -215,7 +215,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.7,
       'detail': null,
       'price': 200,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
     {
       'name': 'Ofada Sauce',
@@ -223,7 +223,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.5,
       'detail': null,
       'price': 100,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
     {
       'name': 'Efo riro',
@@ -231,7 +231,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.7,
       'detail': null,
       'price': 200,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
     {
       'name': 'Ewedu',
@@ -239,7 +239,7 @@ const Map<String, dynamic> dataSET = {
       'rating': 4.5,
       'detail': null,
       'price': 100,
-      'menu': soupMenu
+      'menu': soupsMenu
     },
 
     // SWALLOWS
