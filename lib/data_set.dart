@@ -1,24 +1,35 @@
+import 'package:mama_put/constants.dart';
+
 // DATA SET FOR THE MEALS
 
 // MENUS
-const extrasMenu = {'name': 'Extras', 'image': 'assets/images/menu/extras.png'};
-const soupMenu = {'name': 'Soups', 'image': 'assets/images/menu/soups.jpg'};
-const drinksMenu = {'name': 'Drinks', 'image': 'assets/images/menu/drinks.jpg'};
+const soupsMenu = {
+  'name': 'Soups',
+  'image': Constants.menuImages + 'soups.jpg'
+};
+const extrasMenu = {
+  'name': 'Extras',
+  'image': Constants.menuImages + 'extras.jpg'
+};
+const drinksMenu = {
+  'name': 'Drinks',
+  'image': Constants.menuImages + 'drinks.jpg'
+};
 const breakFastMenu = {
   'name': 'Breakfast',
-  'image': 'assets/images/menu/breakfast.jpeg'
+  'image': Constants.menuImages + 'breakfast.jpeg'
 };
 const mainDishMenu = {
   'name': 'Main Dish',
-  'image': 'assets/images/menu/main_dish.jpg'
+  'image': Constants.menuImages + 'main_dish.jpg'
 };
 const swallowMenu = {
   'name': 'Swallows',
-  'image': 'assets/images/menu/swallows.jpg'
+  'image': Constants.menuImages + 'swallows.jpg'
 };
 const proteinMenu = {
   'name': 'Proteins',
-  'image': 'assets/images/menu/proteins.jpg'
+  'image': Constants.menuImages + 'proteins.jpg'
 };
 
 const Map<String, dynamic> dataSET = {
@@ -26,39 +37,39 @@ const Map<String, dynamic> dataSET = {
     // BREAKFASTS
     {
       'name': 'Pap',
-      'image': null,
-      'rating': 4.5,
+      'image': Constants.mealImages + 'pap.jpg',
+      'rating': 4.7,
       'detail': null,
-      'price': 250,
+      'price': 300,
       'menu': breakFastMenu
     },
     {
       'name': 'Akara',
-      'image': null,
-      'rating': 4.4,
+      'image': Constants.mealImages + 'akara.jpg',
+      'rating': 4.6,
       'detail': null,
       'price': 100,
       'menu': breakFastMenu
     },
     {
       'name': 'Custard',
-      'image': null,
-      'rating': 4.4,
+      'image': Constants.mealImages + 'custard.jpg',
+      'rating': 4.6,
       'detail': null,
       'price': 300,
       'menu': breakFastMenu
     },
     {
       'name': 'Boiled Yam',
-      'image': null,
+      'image': Constants.mealImages + 'boiled_yam.jpg',
       'rating': 4.3,
       'detail': null,
       'price': 700,
       'menu': breakFastMenu
     },
     {
-      'name': 'Fried Yam',
-      'image': null,
+      'name': 'Yam Fries',
+      'image': Constants.mealImages + 'yam_fries.jpg',
       'rating': 4.4,
       'detail': null,
       'price': 750,
@@ -66,7 +77,7 @@ const Map<String, dynamic> dataSET = {
     },
     {
       'name': 'Boiled Plantain',
-      'image': null,
+      'image': Constants.mealImages + 'boiled_plantain.jpg',
       'rating': 4.4,
       'detail': null,
       'price': 550,
@@ -74,7 +85,7 @@ const Map<String, dynamic> dataSET = {
     },
     {
       'name': 'Toast Bread',
-      'image': null,
+      'image': Constants.mealImages + 'toast_bread.jpg',
       'rating': 4.5,
       'detail': null,
       'price': 200,
