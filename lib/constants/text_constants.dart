@@ -12,6 +12,9 @@ class TextConstants {
   static TextStyle smallFont(Color color) =>
       TextStyle(color: color, fontSize: 14, fontWeight: medium);
 
+  static TextStyle badgeTextFont(Color color) =>
+      TextStyle(color: color, fontSize: 10, fontWeight: bold);
+
   // FONT WEIGHT
   static const FontWeight bold = FontWeight.bold;
   static const FontWeight medium = FontWeight.w800;

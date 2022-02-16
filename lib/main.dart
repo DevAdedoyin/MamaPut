@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Mama Put',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           appBarTheme: const AppBarTheme(
             backgroundColor: ColorConstants.backgroundColor,
