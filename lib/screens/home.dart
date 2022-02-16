@@ -16,13 +16,15 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(
                   color: ColorConstants.primaryColor,
                   fontWeight: FontWeight.bold,
-                  fontFamily: TextConstants.appTitleFamily)),
+                  fontFamily: TextConstants.appTitleFamily,
+                  fontSize: 20)),
           TextSpan(
               text: 'Put',
               style: TextStyle(
                   color: ColorConstants.secondaryColor,
                   fontWeight: FontWeight.bold,
-                  fontFamily: TextConstants.appTitleFamily)),
+                  fontFamily: TextConstants.appTitleFamily,
+                  fontSize: 17)),
         ])),
       ),
     );

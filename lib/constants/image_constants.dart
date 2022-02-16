@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class ImageConstants {
   // IMAGES LOCATION
   static const String menuImages = 'assets/images/menu/';
