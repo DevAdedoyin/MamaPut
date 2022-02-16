@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mama_put/constants/color_constants.dart';
+import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/screens/home.dart';
 
 void main() {
@@ -19,12 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mama Put',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: ColorConstants.backgroundColor,
-        ),
-        scaffoldBackgroundColor: ColorConstants.backgroundColor,
-        primaryColor: ColorConstants.primaryColor,
-      ),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: ColorConstants.backgroundColor,
+          ),
+          scaffoldBackgroundColor: ColorConstants.backgroundColor,
+          primaryColor: ColorConstants.primaryColor,
+          fontFamily: TextConstants.fontFamily),
       home: const HomeScreen(),
     );
   }
