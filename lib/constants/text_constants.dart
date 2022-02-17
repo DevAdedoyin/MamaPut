@@ -3,6 +3,12 @@ import 'package:mama_put/constants/color_constants.dart';
 
 class TextConstants {
   // TEXT STYLES
+  static TextStyle extraLargeFont({String? fontFamily}) => TextStyle(
+      color: ColorConstants.primaryColor,
+      fontFamily: fontFamily,
+      fontSize: 25,
+      fontWeight: bold);
+
   static TextStyle largeFont() => const TextStyle(
       color: ColorConstants.primaryColor, fontSize: 20, fontWeight: bold);
 

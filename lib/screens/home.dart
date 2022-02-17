@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
@@ -46,6 +47,44 @@ class HomeScreen extends StatelessWidget {
           ),
           SizeConstants.gapWidth(12)
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+            padding: SizeConstants.spacing(0.0, 10.0),
+            child: Center(
+              child: Column(children: [
+                SizedBox(
+                  height: 430,
+                  width: 320,
+                  child: Card(
+                    elevation: 10,
+                    color: ColorConstants.tertiaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        SizeConstants.gapHeight(20),
+                        Row(
+                          children: [
+                            SizeConstants.gapWidth(10),
+                            Text(
+                              'Welcome Dash, ',
+                              style: TextConstants.extraLargeFont(
+                                  fontFamily: TextConstants.appTitleFamily),
+                            ),
+                            const Icon(
+                              FontAwesomeIcons.handPeace,
+                              color: ColorConstants.primaryColor,
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ]),
+            )),
       ),
     );
   }
