@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mama_put/constants/color_constants.dart';
+import 'package:mama_put/constants/image_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:badges/badges.dart';
@@ -56,30 +57,43 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 430,
                   width: 320,
-                  child: Card(
-                    elevation: 10,
-                    color: ColorConstants.tertiaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      children: [
-                        SizeConstants.gapHeight(20),
-                        Row(
-                          children: [
-                            SizeConstants.gapWidth(10),
-                            Text(
-                              'Welcome Dash, ',
-                              style: TextConstants.extraLargeFont(
-                                  fontFamily: TextConstants.appTitleFamily),
+                  child: Banner(
+                    message: '20% Off',
+                    location: BannerLocation.bottomStart,
+                    child: Card(
+                      elevation: 10,
+                      color: ColorConstants.tertiaryColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        children: [
+                          SizeConstants.gapHeight(20),
+                          Row(
+                            children: [
+                              SizeConstants.gapWidth(15),
+                              Text(
+                                'Welcome Adedoyin, ',
+                                style: TextConstants.extraLargeFont(
+                                  fontFamily: TextConstants.appTitleFamily,
+                                ),
+                              ),
+                              const Icon(FontAwesomeIcons.handPeace)
+                            ],
+                          ),
+                          Container(
+                            width: 270,
+                            margin: SizeConstants.spacing(10.0, 10.0),
+                            child: Text(
+                              'Order for your favorite Nigerian food here at Mamaput.',
+                              textAlign: TextAlign.justify,
+                              style: TextConstants.smallFont(
+                                  ColorConstants.primaryColor),
                             ),
-                            const Icon(
-                              FontAwesomeIcons.handPeace,
-                              color: ColorConstants.primaryColor,
-                            )
-                          ],
-                        )
-                      ],
+                          ),
+                          Image.asset(ImageConstants.mealImages + 'banner1.png')
+                        ],
+                      ),
                     ),
                   ),
                 )
