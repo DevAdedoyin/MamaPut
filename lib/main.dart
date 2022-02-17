@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
-import 'package:mama_put/screens/home.dart';
+import 'package:mama_put/screens/home/home.dart';
 
 void main() {
   runApp(const MyApp());
