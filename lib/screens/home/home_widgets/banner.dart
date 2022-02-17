@@ -6,7 +6,11 @@ import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 
 class BannerWidget extends StatelessWidget {
-  const BannerWidget({Key? key}) : super(key: key);
+  final int index;
+  BannerWidget(
+    this.index, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class BannerWidget extends StatelessWidget {
         location: BannerLocation.bottomStart,
         child: Card(
           elevation: 10,
-          color: ColorConstants.tertiaryColor,
+          color: _colors[index],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -41,7 +45,7 @@ class BannerWidget extends StatelessWidget {
                 margin: SizeConstants.spacing(10.0, 10.0),
                 child: Text(
                   'At Mamaput, we got your breakfast, launch and dinner readily available for you.',
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.center,
                   style: TextConstants.smallFont(ColorConstants.primaryColor),
                 ),
               ),
@@ -67,4 +71,10 @@ class BannerWidget extends StatelessWidget {
       ),
     );
   }
+
+  static const _colors = {
+    0: ColorConstants.tertiaryColor,
+    1: ColorConstants.secondaryColor,
+    2: ColorConstants.primaryColor
+  };
 }

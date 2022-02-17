@@ -58,13 +58,13 @@ class HomeScreen extends StatelessWidget {
               child: Column(children: [
                 CarouselSlider.builder(
                     itemCount: 3,
-                    itemBuilder: (_, num1, num2) {
-                      return const BannerWidget();
+                    itemBuilder: (_, index, __) {
+                      return BannerWidget(index);
                     },
                     options: CarouselOptions(
-                        aspectRatio: 7 / 8,
-                        autoPlay: true,
-                        )),
+                      aspectRatio: 7 / 8,
+                      autoPlay: true,
+                    )),
               ]),
             )),
       ),
