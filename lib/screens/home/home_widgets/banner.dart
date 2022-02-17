@@ -49,7 +49,7 @@ class BannerWidget extends StatelessWidget {
                   style: TextConstants.smallFont(ColorConstants.primaryColor),
                 ),
               ),
-              Image.asset(ImageConstants.mealImages + 'banner1.png'),
+              Image.asset(_images[index]!),
               SizeConstants.gapHeight(10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -76,5 +76,11 @@ class BannerWidget extends StatelessWidget {
     0: ColorConstants.tertiaryColor,
     1: ColorConstants.secondaryColor,
     2: ColorConstants.primaryColor
+  };
+
+  static const _images = {
+    0: ImageConstants.mealImages + 'banner1.png',
+    1: ImageConstants.mealImages + 'banner2.png',
+    2: ImageConstants.mealImages + 'banner3.png',
   };
 }
