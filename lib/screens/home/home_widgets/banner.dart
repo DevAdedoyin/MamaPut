@@ -44,12 +44,17 @@ class BannerWidget extends StatelessWidget {
                 width: 270,
                 margin: SizeConstants.spacing(10.0, 10.0),
                 child: Text(
-                  'At Mamaput, we got your breakfast, launch and dinner readily available for you.',
+                  _message[index]!,
                   textAlign: TextAlign.center,
                   style: TextConstants.smallFont(ColorConstants.primaryColor),
                 ),
               ),
-              Image.asset(_images[index]!),
+              Image.asset(
+                _images[index]!,
+                fit: BoxFit.cover,
+                height: 250,
+                width: 250,
+              ),
               SizeConstants.gapHeight(10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -75,12 +80,18 @@ class BannerWidget extends StatelessWidget {
   static const _colors = {
     0: ColorConstants.tertiaryColor,
     1: ColorConstants.secondaryColor,
-    2: ColorConstants.primaryColor
+    2: ColorConstants.backgroundColor
   };
 
   static const _images = {
     0: ImageConstants.mealImages + 'banner1.png',
     1: ImageConstants.mealImages + 'banner2.png',
     2: ImageConstants.mealImages + 'banner3.png',
+  };
+
+  static const _message = {
+    0: 'At Mamaput, we got your breakfast, launch and dinner readily available for you.',
+    1: 'Fill your belly with nutritious and well cooked meal from quality and well experienced chef.',
+    2: 'Quick delivery to anywhere in Lagos.',
   };
 }
