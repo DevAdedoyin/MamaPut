@@ -69,15 +69,15 @@ class HomeScreen extends StatelessWidget {
                           aspectRatio: 7 / 8,
                           autoPlay: true,
                         )),
-                    SizeConstants.gapHeight(20),
+                    SizeConstants.gapHeight(25),
                     Container(
                       margin: SizeConstants.spacing(10.0, 0.0),
                       child: Text(
                         'Menu',
-                        style: TextConstants.extraLargeFont(),
+                        style: TextConstants.largeFont(),
                       ),
                     ),
-                    SizeConstants.gapHeight(5),
+                    SizeConstants.gapHeight(7),
                     SizedBox(
                       height: 170,
                       child: ListView.builder(

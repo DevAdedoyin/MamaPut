@@ -11,7 +11,7 @@ class TextConstants {
 
   // LARGE FONTS
   static TextStyle largeFont({Color? color}) =>
-      TextStyle(color: color, fontSize: 20, fontWeight: bold);
+      TextStyle(color: color, fontSize: 21, fontWeight: bold);
 
   // MEDIUM FONTS
   static TextStyle mediumFont(Color color) =>
