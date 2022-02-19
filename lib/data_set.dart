@@ -6,6 +6,16 @@ import 'package:mama_put/constants/image_constants.dart';
 const String details =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
 
+const menuList = [
+  soupsMenu,
+  extrasMenu,
+  drinksMenu,
+  breakFastMenu,
+  mainDishMenu,
+  swallowMenu,
+  proteinMenu
+];
+
 // MENUS
 const soupsMenu = {
   'name': 'Soups',

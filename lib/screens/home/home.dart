@@ -7,6 +7,7 @@ import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:badges/badges.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
+import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -73,8 +74,18 @@ class HomeScreen extends StatelessWidget {
                         'Menu',
                         style: TextConstants.largeFont(),
                       ),
-                      
                     ),
+                    SizedBox(
+                      height: 100,
+                      width: 100,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemCount: 5,
+                          itemBuilder: (_, index) {
+                            return const MenuCard();
+                          }),
+                    )
                   ]),
             )),
       ),
