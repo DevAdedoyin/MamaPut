@@ -6,6 +6,7 @@ import 'package:mama_put/constants/image_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:badges/badges.dart';
+import 'package:mama_put/data_set.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 
@@ -68,22 +69,25 @@ class HomeScreen extends StatelessWidget {
                           aspectRatio: 7 / 8,
                           autoPlay: true,
                         )),
+                    SizeConstants.gapHeight(20),
                     Container(
-                      margin: SizeConstants.spacing(10.0, 20.0),
+                      margin: SizeConstants.spacing(10.0, 0.0),
                       child: Text(
                         'Menu',
                         style: TextConstants.largeFont(),
                       ),
                     ),
+                    SizeConstants.gapHeight(5),
                     SizedBox(
-                      height: 100,
-                      width: 100,
+                      height: 170,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          itemCount: 5,
+                          itemCount: menuList.length,
                           itemBuilder: (_, index) {
-                            return const MenuCard();
+                            return MenuCard(
+                              index: index,
+                            );
                           }),
                     )
                   ]),

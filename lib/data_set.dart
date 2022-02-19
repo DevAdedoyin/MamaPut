@@ -23,7 +23,7 @@ const soupsMenu = {
 };
 const extrasMenu = {
   'name': 'Extras',
-  'image': ImageConstants.menuImages + 'extras.jpg'
+  'image': ImageConstants.menuImages + 'extras.png'
 };
 const drinksMenu = {
   'name': 'Drinks',
