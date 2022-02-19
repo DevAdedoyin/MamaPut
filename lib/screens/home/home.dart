@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                       margin: SizeConstants.spacing(10.0, 0.0),
                       child: Text(
                         'Menu',
-                        style: TextConstants.largeFont(),
+                        style: TextConstants.extraLargeFont(),
                       ),
                     ),
                     SizeConstants.gapHeight(5),
@@ -85,8 +85,11 @@ class HomeScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: menuList.length,
                           itemBuilder: (_, index) {
-                            return MenuCard(
-                              index: index,
+                            return Container(
+                              margin: SizeConstants.spacing(7.0, 0.0),
+                              child: MenuCard(
+                                index: index,
+                              ),
                             );
                           }),
                     )

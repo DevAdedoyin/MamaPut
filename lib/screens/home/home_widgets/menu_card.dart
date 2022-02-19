@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
+import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
 
 class MenuCard extends StatelessWidget {
@@ -9,24 +10,28 @@ class MenuCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 10,
-      color: ColorConstants.secondaryColor,
-      margin: SizeConstants.spacing(7.0, 0.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          SizedBox(
-            height: 100,
-            width: 120,
-            child: Image.asset(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(7),
+      child: Container(
+        // elevation: 1,
+        color: ColorConstants.tertiaryColor,
+        // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
               menuList[index!]['image']!,
-              // width: 100,
+              height: 120,
+              width: 120,
               fit: BoxFit.cover,
             ),
-          ),
-        ],
+            SizeConstants.gapHeight(12),
+            Text(
+              menuList[index!]['name']!,
+              style: TextConstants.mediumFont(ColorConstants.primaryColor),
+            )
+          ],
+        ),
       ),
     );
   }

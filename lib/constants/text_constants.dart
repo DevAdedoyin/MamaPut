@@ -10,8 +10,8 @@ class TextConstants {
           color: color, fontFamily: fontFamily, fontSize: 25, fontWeight: bold);
 
   // LARGE FONTS
-  static TextStyle largeFont() => const TextStyle(
-      color: ColorConstants.primaryColor, fontSize: 20, fontWeight: bold);
+  static TextStyle largeFont({Color? color}) =>
+      TextStyle(color: color, fontSize: 20, fontWeight: bold);
 
   // MEDIUM FONTS
   static TextStyle mediumFont(Color color) =>
