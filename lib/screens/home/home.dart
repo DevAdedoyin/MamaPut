@@ -55,17 +55,27 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
             padding: SizeConstants.spacing(0.0, 10.0),
             child: Center(
-              child: Column(children: [
-                CarouselSlider.builder(
-                    itemCount: 3,
-                    itemBuilder: (_, index, __) {
-                      return BannerWidget(index);
-                    },
-                    options: CarouselOptions(
-                      aspectRatio: 7 / 8,
-                      autoPlay: true,
-                    )),
-              ]),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CarouselSlider.builder(
+                        itemCount: 3,
+                        itemBuilder: (_, index, __) {
+                          return BannerWidget(index);
+                        },
+                        options: CarouselOptions(
+                          aspectRatio: 7 / 8,
+                          autoPlay: true,
+                        )),
+                    Container(
+                      margin: SizeConstants.spacing(10.0, 20.0),
+                      child: Text(
+                        'Menu',
+                        style: TextConstants.largeFont(),
+                      ),
+                      
+                    ),
+                  ]),
             )),
       ),
     );
