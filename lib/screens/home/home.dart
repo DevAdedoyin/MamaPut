@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -7,6 +9,7 @@ import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:badges/badges.dart';
 import 'package:mama_put/data_set.dart';
+import 'package:mama_put/model.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 import 'package:mama_put/screens/home/home_widgets/recommended.dart';
@@ -111,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: 5,
                           itemBuilder: (_, index) {
-                            if (dataSET['meal'][index]['rating'] >= 4.6) {
+                            if (dataSET['meal']![index]['rating'] >= 4.7) {
                               return Container(
                                   margin: SizeConstants.spacing(8.0, 0.0),
                                   child: RecommendedWidget(

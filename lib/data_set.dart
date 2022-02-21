@@ -46,7 +46,7 @@ const proteinMenu = {
   'image': ImageConstants.menuImages + 'proteins.jpg'
 };
 
-const Map<String, dynamic> dataSET = {
+const Map<String, List<Map>> dataSET = {
   'meal': [
     // BREAKFASTS
     {

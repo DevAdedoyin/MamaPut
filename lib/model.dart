@@ -1,3 +1,5 @@
+import 'package:mama_put/data_set.dart';
+
 class Meals {
   final String name;
   final String image;
@@ -28,11 +30,16 @@ class Meals {
 }
 
 class MealsList {
-  final Map<String, List<Meals>> mealsList;
+  late Map<String, List<Meals>> mealsList;
 
   MealsList(this.mealsList);
 
-  MealsList.fromJson(Map<String, dynamic> json) : mealsList = json['meal'];
+  MealsList.fromJson(Map<String, dynamic> json) {
+    mealsList = json['meal'];
+  }
 
   Map<String, dynamic> toJson() => {'meal': mealsList};
 }
+
+// DATA
+final meals = MealsList.fromJson(dataSET);
