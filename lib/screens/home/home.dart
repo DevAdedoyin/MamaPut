@@ -72,14 +72,15 @@ class HomeScreen extends StatelessWidget {
                         )),
                     SizeConstants.gapHeight(25),
                     Container(
-                      margin: SizeConstants.spacing(10.0, 0.0),
+                      margin: SizeConstants.spacing(15.0, 0.0),
                       child: Text(
                         'Menu',
                         style: TextConstants.largeFont(),
                       ),
                     ),
                     SizeConstants.gapHeight(7),
-                    SizedBox(
+                    Container(
+                      margin: SizeConstants.spacing(10.0, 5.0),
                       height: 170,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -95,7 +96,26 @@ class HomeScreen extends StatelessWidget {
                           }),
                     ),
                     SizeConstants.gapHeight(25),
-                    const RecommendedWidget(),
+                    Container(
+                      margin: SizeConstants.spacing(15.0, 0.0),
+                      child: Text(
+                        'Recommended',
+                        style: TextConstants.largeFont(),
+                      ),
+                    ),
+                    Container(
+                      margin: SizeConstants.spacing(5.0, 5.0),
+                      height: 200,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemCount: 5,
+                          itemBuilder: (_, index) {
+                            return Container(
+                                margin: SizeConstants.spacing(10.0, 0.0),
+                                child: const RecommendedWidget());
+                          }),
+                    ),
                   ]),
             )),
       ),

@@ -73,8 +73,8 @@ class RecommendedWidget extends StatelessWidget {
                 top: 0,
                 left: 20,
                 child: Container(
-                  height: 110,
-                  width: 110,
+                  height: 105,
+                  width: 105,
                   child: ClipOval(
                       child: Image.asset('assets/images/meals/assorted.png')),
                 )),
