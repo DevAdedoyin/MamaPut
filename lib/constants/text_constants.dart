@@ -11,15 +11,15 @@ class TextConstants {
 
   // LARGE FONTS
   static TextStyle largeFont({Color? color}) =>
-      TextStyle(color: color, fontSize: 21, fontWeight: bold);
+      TextStyle(color: color, fontSize: 22, fontWeight: bold);
 
   // MEDIUM FONTS
   static TextStyle mediumFont(Color color) =>
-      TextStyle(color: color, fontSize: 17, fontWeight: medium);
+      TextStyle(color: color, fontSize: 18, fontWeight: medium);
 
   // SMALL FONTS
   static TextStyle smallFont(Color color) =>
-      TextStyle(color: color, fontSize: 14, fontWeight: medium);
+      TextStyle(color: color, fontSize: 15, fontWeight: medium);
 
   // BADGE TEXT FONTS
   static TextStyle badgeTextFont(Color color) =>
