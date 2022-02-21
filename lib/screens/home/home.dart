@@ -9,6 +9,7 @@ import 'package:badges/badges.dart';
 import 'package:mama_put/data_set.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
+import 'package:mama_put/screens/home/home_widgets/recommended.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -92,7 +93,9 @@ class HomeScreen extends StatelessWidget {
                               ),
                             );
                           }),
-                    )
+                    ),
+                    SizeConstants.gapHeight(25),
+                    const RecommendedWidget(),
                   ]),
             )),
       ),
