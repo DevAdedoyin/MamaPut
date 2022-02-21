@@ -111,9 +111,15 @@ class HomeScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: 5,
                           itemBuilder: (_, index) {
-                            return Container(
-                                margin: SizeConstants.spacing(10.0, 0.0),
-                                child: const RecommendedWidget());
+                            if (dataSET['meal'][index]['rating'] >= 4.6) {
+                              return Container(
+                                  margin: SizeConstants.spacing(8.0, 0.0),
+                                  child: RecommendedWidget(
+                                    index: index,
+                                  ));
+                            } else {
+                              return Container();
+                            }
                           }),
                     ),
                   ]),

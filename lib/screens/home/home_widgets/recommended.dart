@@ -4,7 +4,8 @@ import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 
 class RecommendedWidget extends StatelessWidget {
-  const RecommendedWidget({Key? key}) : super(key: key);
+  final int? index;
+  const RecommendedWidget({Key? key, this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class RecommendedWidget extends StatelessWidget {
                   child: Container(
                     padding: SizeConstants.spacing(7.0, 7.0),
                     color: ColorConstants.primaryColor,
-                    height: 130,
+                    height: 150,
                     width: 160,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,8 +72,8 @@ class RecommendedWidget extends StatelessWidget {
                 )),
             Positioned(
                 top: 0,
-                left: 20,
-                child: Container(
+                left: 28,
+                child: SizedBox(
                   height: 105,
                   width: 105,
                   child: ClipOval(
