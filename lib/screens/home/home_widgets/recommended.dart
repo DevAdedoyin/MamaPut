@@ -20,11 +20,11 @@ class RecommendedWidget extends StatelessWidget {
           Positioned(
               bottom: 0,
               child: Card(
-                color: ColorConstants.whiteColor,
+                color: ColorConstants.secondaryColor,
                 shadowColor: ColorConstants.primaryColor,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Container(
                   padding: SizeConstants.spacing(10.0, 10.0),
                   height: 200,
@@ -58,7 +58,7 @@ class RecommendedWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            '# ${dataSET['meal']![index!]['price']}',
+                            '#${dataSET['meal']![index!]['price']}',
                             style: TextConstants.extraLargeFont(
                                 color: ColorConstants.primaryColor),
                           ),
