@@ -14,7 +14,7 @@ class MenuCard extends StatelessWidget {
       margin: SizeConstants.spacing(7.5, 3.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
-        color: Colors.white,
+        color: ColorConstants.secondaryColor,
         boxShadow: const [
           BoxShadow(
             color: ColorConstants.primaryColor,
@@ -38,7 +38,7 @@ class MenuCard extends StatelessWidget {
             SizeConstants.gapHeight(12),
             Text(
               menuList[index!]['name']!,
-              style: TextConstants.mediumFont(ColorConstants.primaryColor),
+              style: TextConstants.mediumFont(ColorConstants.backgroundColor),
             )
           ],
         ),

@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                         style: TextConstants.largeFont(),
                       ),
                     ),
-                    SizeConstants.gapHeight(7),
+                    SizeConstants.gapHeight(2),
                     Container(
                       margin: SizeConstants.spacing(10.0, 5.0),
                       height: 180,
@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                         style: TextConstants.largeFont(),
                       ),
                     ),
-                    SizeConstants.gapHeight(7),
+                    SizeConstants.gapHeight(2),
                     Container(
                       margin: SizeConstants.spacing(5.0, 5.0),
                       height: 270,
