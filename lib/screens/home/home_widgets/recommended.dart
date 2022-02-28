@@ -10,82 +10,91 @@ class RecommendedWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      // color: ColorConstants.tertiaryColor,
-      height: 250,
-      width: 227,
-      child: Stack(
-        children: [
-          Positioned(
-              bottom: 0,
-              child: Card(
+    return Stack(
+      children: [
+        Positioned(
+            bottom: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15.0),
                 color: ColorConstants.secondaryColor,
-                shadowColor: ColorConstants.primaryColor,
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Container(
-                  padding: SizeConstants.spacing(10.0, 10.0),
-                  height: 200,
-                  width: 220,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
+                boxShadow: const [
+                  BoxShadow(
+                    color: ColorConstants.primaryColor,
+                    offset: Offset(0.0, 2.0), //(x,y)
+                    blurRadius: 7.0,
+                  ),
+                ],
+              ),
+              // margin: SizeConstants.spacing(7.5, 3.0),
+              padding: SizeConstants.spacing(10.0, 10.0),
+              height: 170,
+              width: 190,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
                     children: [
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: ColorConstants.tertiaryColor,
-                          ),
-                          Text(
-                            '${dataSET['meal']![index!]['rating']}/5.0',
-                            style: TextConstants.mediumFont(
-                                ColorConstants.primaryColor),
-                          ),
-                        ],
+                      const Icon(
+                        Icons.star,
+                        color: ColorConstants.tertiaryColor,
                       ),
-                      SizeConstants.gapHeight(5),
                       Text(
-                        dataSET['meal']![index!]['name'].toString(),
-                        style: TextConstants.largeFont(
-                            color: ColorConstants.primaryColor),
-                      ),
-                      SizeConstants.gapHeight(5),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '#${dataSET['meal']![index!]['price']}',
-                            style: TextConstants.extraLargeFont(
-                                color: ColorConstants.primaryColor),
-                          ),
-                          const Icon(
-                            Icons.favorite,
-                            color: ColorConstants.tertiaryColor,
-                          ),
-                        ],
+                        '${dataSET['meal']![index!]['rating']}/5.0',
+                        style: TextConstants.mediumFont(
+                            ColorConstants.backgroundColor),
                       ),
                     ],
                   ),
-                ),
+                  SizeConstants.gapHeight(5),
+                  Text(
+                    dataSET['meal']![index!]['name'].toString(),
+                    style: TextConstants.largeFont(
+                        color: ColorConstants.backgroundColor),
+                  ),
+                  SizeConstants.gapHeight(5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '#${dataSET['meal']![index!]['price']}',
+                        style: TextConstants.extraLargeFont(
+                            color: ColorConstants.backgroundColor),
+                      ),
+                      const Icon(
+                        Icons.favorite,
+                        color: ColorConstants.tertiaryColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            )),
+        Positioned(
+            top: 0,
+            left: 30,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(63.0),
+                boxShadow: const [
+                  BoxShadow(
+                    color: ColorConstants.primaryColor,
+                    offset: Offset(0.0, 2.0), //(x,y)
+                    blurRadius: 7.0,
+                  ),
+                ],
+              ),
+              height: 130,
+              width: 130,
+              child: ClipOval(
+                  child: Image.asset(
+                dataSET['meal']![index!]['image'],
+                fit: BoxFit.cover,
               )),
-          Positioned(
-              top: 0,
-              left: 46,
-              child: SizedBox(
-                height: 130,
-                width: 130,
-                child: ClipOval(
-                    child: Image.asset(
-                  dataSET['meal']![index!]['image'],
-                  fit: BoxFit.cover,
-                )),
-              )),
-        ],
-      ),
+            )),
+      ],
     );
   }
 }
