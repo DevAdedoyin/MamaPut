@@ -10,20 +10,31 @@ class MenuCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(7),
-      child: Container(
-        // elevation: 1,
-        color: ColorConstants.tertiaryColor,
-        // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    return Container(
+      margin: SizeConstants.spacing(7.0, 3.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        color: Colors.white,
+        boxShadow: const [
+          BoxShadow(
+            color: ColorConstants.primaryColor,
+            offset: Offset(0.0, 2.0), //(x,y)
+            blurRadius: 6.0,
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.0),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          // mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              menuList[index!]['image']!,
-              height: 120,
-              width: 120,
-              fit: BoxFit.cover,
+            SizedBox(
+              height: 125,
+              width: 140,
+              child: Image.asset(
+                menuList[index!]['image']!,
+                fit: BoxFit.cover,
+              ),
             ),
             SizeConstants.gapHeight(12),
             Text(

@@ -20,12 +20,12 @@ class RecommendedWidget extends StatelessWidget {
           Positioned(
               bottom: 0,
               child: Card(
+                color: ColorConstants.secondaryColor,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 child: Container(
                   padding: SizeConstants.spacing(10.0, 10.0),
-                  // color: ColorConstants.primaryColor,
                   height: 200,
                   width: 220,
                   child: Column(

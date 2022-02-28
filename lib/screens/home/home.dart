@@ -84,17 +84,15 @@ class HomeScreen extends StatelessWidget {
                     SizeConstants.gapHeight(7),
                     Container(
                       margin: SizeConstants.spacing(10.0, 5.0),
-                      height: 170,
+                      height: 180,
+                      // color: ColorConstants.primaryColor,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
                           itemCount: menuList.length,
                           itemBuilder: (_, index) {
-                            return Container(
-                              margin: SizeConstants.spacing(7.0, 0.0),
-                              child: MenuCard(
-                                index: index,
-                              ),
+                            return MenuCard(
+                              index: index,
                             );
                           }),
                     ),
