@@ -17,7 +17,7 @@ class RecommendedWidget extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
-                color: ColorConstants.secondaryColor,
+                color: ColorConstants.whiteColor,
                 boxShadow: const [
                   BoxShadow(
                     color: ColorConstants.primaryColor,
@@ -37,14 +37,12 @@ class RecommendedWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Icon(
-                        Icons.star,
-                        color: ColorConstants.tertiaryColor,
-                      ),
+                      const Icon(Icons.star,
+                          color: ColorConstants.tertiaryColor, size: 20),
                       Text(
                         '${dataSET['meal']![index!]['rating']}/5.0',
                         style: TextConstants.mediumFont(
-                            ColorConstants.backgroundColor),
+                            ColorConstants.primaryColor),
                       ),
                     ],
                   ),
@@ -52,7 +50,7 @@ class RecommendedWidget extends StatelessWidget {
                   Text(
                     dataSET['meal']![index!]['name'].toString(),
                     style: TextConstants.largeFont(
-                        color: ColorConstants.backgroundColor),
+                        color: ColorConstants.secondaryColor),
                   ),
                   SizeConstants.gapHeight(5),
                   Row(
@@ -61,11 +59,11 @@ class RecommendedWidget extends StatelessWidget {
                       Text(
                         '#${dataSET['meal']![index!]['price']}',
                         style: TextConstants.extraLargeFont(
-                            color: ColorConstants.backgroundColor),
+                            color: ColorConstants.primaryColor),
                       ),
                       const Icon(
                         Icons.favorite,
-                        color: ColorConstants.tertiaryColor,
+                        color: ColorConstants.secondaryColor,
                       ),
                     ],
                   ),
