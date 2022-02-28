@@ -30,16 +30,18 @@ class Meals {
 }
 
 class MealsList {
-  late Map<String, List<Meals>> mealsList;
+  late List<Map<dynamic, dynamic>> mealsList;
+
+  // dynamic meals = Meals.fromJson(mealsList);
 
   MealsList(this.mealsList);
 
   MealsList.fromJson(Map<String, dynamic> json) {
     mealsList = json['meal'];
   }
-
+// .values.toList() as List<Map<String, Meals>>
   Map<String, dynamic> toJson() => {'meal': mealsList};
 }
 
 // DATA
-final meals = MealsList.fromJson(dataSET);
+final mealss = MealsList.fromJson(dataSET);

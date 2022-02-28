@@ -108,13 +108,16 @@ class HomeScreen extends StatelessWidget {
                     ),
                     Container(
                       margin: SizeConstants.spacing(5.0, 5.0),
-                      height: 200,
+                      height: 270,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
                           itemCount: 5,
                           itemBuilder: (_, index) {
-                            if (dataSET['meal']![index]['rating'] >= 4.7) {
+                            // Map<String, dynamic> meal =
+                            //     mealss.mealsList[index] as Map<String, dynamic>;
+                            // Meals meals = Meals.fromJson(meal);
+                            if (dataSET['meal']![index]['rating'] >= 4.6) {
                               return Container(
                                   margin: SizeConstants.spacing(8.0, 0.0),
                                   child: RecommendedWidget(
