@@ -11,9 +11,9 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: SizeConstants.spacing(7.0, 3.0),
+      margin: SizeConstants.spacing(7.5, 3.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
+        borderRadius: BorderRadius.circular(15.0),
         color: Colors.white,
         boxShadow: const [
           BoxShadow(
@@ -26,7 +26,6 @@ class MenuCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: Column(
-          // mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
               height: 125,
