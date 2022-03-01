@@ -12,6 +12,7 @@ class MenuCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: SizeConstants.spacing(7.5, 3.0),
+      width: 135,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         color: ColorConstants.whiteColor,
@@ -29,7 +30,6 @@ class MenuCard extends StatelessWidget {
           children: [
             SizedBox(
               height: 125,
-              width: 140,
               child: Image.asset(
                 menuList[index!]['image']!,
                 fit: BoxFit.cover,
