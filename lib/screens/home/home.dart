@@ -131,18 +131,22 @@ class HomeScreen extends StatelessWidget {
                             'Recommended',
                             style: TextConstants.largeFont(),
                           ),
-                          Card(
-                            color: ColorConstants.tertiaryColor,
-                            elevation: 2,
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 70,
-                              height: 23,
-                              child: Text(
-                                'See all',
-                                style: TextConstants.smallFont(
-                                    ColorConstants.primaryColor,
-                                    fontStyle: FontStyle.italic),
+                          InkWell(
+                            onTap: () => Navigator.pushNamed(
+                                context, Navigators.recommendedScreen),
+                            child: Card(
+                              color: ColorConstants.tertiaryColor,
+                              elevation: 2,
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 70,
+                                height: 23,
+                                child: Text(
+                                  'See all',
+                                  style: TextConstants.smallFont(
+                                      ColorConstants.primaryColor,
+                                      fontStyle: FontStyle.italic),
+                                ),
                               ),
                             ),
                           ),
