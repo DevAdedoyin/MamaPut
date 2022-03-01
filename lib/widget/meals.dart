@@ -52,7 +52,9 @@ class MealWidget extends StatelessWidget {
                         padding: SizeConstants.spacing(3.0, 3.0),
                         backgroundColor: ColorConstants.primaryColor,
                         elevation: 2,
+                        labelPadding: SizeConstants.spacing(7.0, -3.0),
                         label: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Icon(Icons.star,
