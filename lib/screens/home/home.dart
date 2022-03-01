@@ -121,8 +121,12 @@ class HomeScreen extends StatelessWidget {
                                   alignment: Alignment.center,
                                   width: 200,
                                   margin: SizeConstants.spacing(7.0, 5.0),
-                                  child: RecommendedWidget(
-                                    index: index,
+                                  child: Banner(
+                                    message: '20% Off',
+                                    location: BannerLocation.topStart,
+                                    child: RecommendedWidget(
+                                      index: index,
+                                    ),
                                   ));
                             } else {
                               return Container();

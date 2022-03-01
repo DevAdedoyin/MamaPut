@@ -35,24 +35,38 @@ class RecommendedWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.star,
-                          color: ColorConstants.tertiaryColor, size: 20),
-                      Text(
-                        '${dataSET['meal']![index!]['rating']}/5.0',
-                        style: TextConstants.mediumFont(
-                            ColorConstants.primaryColor),
+                  SizedBox(
+                    width: 100,
+                    height: 30,
+                    child: Chip(
+                      padding: SizeConstants.spacing(5.0, 5.0),
+                      backgroundColor: ColorConstants.secondaryColor,
+                      elevation: 2,
+                      label: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Icon(Icons.star,
+                              color: ColorConstants.tertiaryColor, size: 20),
+                          Text(
+                            '${dataSET['meal']![index!]['rating']}/5.0',
+                            style: TextConstants.mediumFont(
+                                ColorConstants.backgroundColor),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
-                  SizeConstants.gapHeight(5),
-                  Text(
-                    dataSET['meal']![index!]['name'].toString(),
-                    style: TextConstants.largeFont(
-                        color: ColorConstants.secondaryColor),
+                  SizeConstants.gapHeight(3),
+                  SizedBox(
+                    width: 150,
+                    child: Text(
+                      dataSET['meal']![index!]['name'].toString(),
+                      overflow: TextOverflow.ellipsis,
+                      style: TextConstants.largeFont(
+                          color: ColorConstants.secondaryColor),
+                    ),
                   ),
-                  SizeConstants.gapHeight(5),
+                  SizeConstants.gapHeight(3),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
