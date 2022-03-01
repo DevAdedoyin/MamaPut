@@ -85,8 +85,8 @@ class RecommendedWidget extends StatelessWidget {
               ),
             )),
         Positioned(
-            top: 0,
-            left: 30,
+            top: 10,
+            left: 40,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(63.0),
@@ -98,8 +98,8 @@ class RecommendedWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              height: 130,
-              width: 130,
+              height: 110,
+              width: 110,
               child: ClipOval(
                   child: Image.asset(
                 dataSET['meal']![index!]['image'],

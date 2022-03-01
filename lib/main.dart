@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
+import 'package:mama_put/model.dart';
 import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home.dart';
 import 'package:mama_put/screens/menu_screen.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: ColorConstants.backgroundColor,
     ));
+    RecommendedMeals.recommendedMeals();
 
     return MaterialApp(
       title: 'Mama Put',

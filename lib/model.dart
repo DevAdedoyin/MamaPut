@@ -1,4 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:mama_put/data_set.dart';
+import 'package:mama_put/screens/home/home_widgets/recommended.dart';
+import 'package:mama_put/widget/meals.dart';
 
 class Meals {
   final String name;
@@ -45,3 +48,17 @@ class MealsList {
 
 // DATA
 final mealss = MealsList.fromJson(dataSET);
+
+class RecommendedMeals {
+  static List<Widget> meals = [];
+
+  static recommendedMeals() {
+    for (int i = 0; i < dataSET['meal']!.length; i++) {
+      if (dataSET['meal']![i]['rating'] >= 4.7) {
+        meals.add(MealWidget(
+          index: i,
+        ));
+      }
+    }
+  }
+}
