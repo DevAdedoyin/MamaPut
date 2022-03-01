@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
+import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home.dart';
+import 'package:mama_put/screens/menu_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
           primaryColor: ColorConstants.primaryColor,
           fontFamily: TextConstants.fontFamily),
       home: const HomeScreen(),
+      routes: {Navigators.menuScreen: (context) => const MenuScreen()},
     );
   }
 }

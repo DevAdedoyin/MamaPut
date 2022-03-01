@@ -18,8 +18,14 @@ class TextConstants {
       TextStyle(color: color, fontSize: 18, fontWeight: medium);
 
   // SMALL FONTS
-  static TextStyle smallFont(Color color) =>
-      TextStyle(color: color, fontSize: 15, fontWeight: medium);
+  static TextStyle smallFont(Color color,
+          {String? fontFamily, FontStyle? fontStyle}) =>
+      TextStyle(
+          color: color,
+          fontSize: 15,
+          fontWeight: medium,
+          fontFamily: fontFamily,
+          fontStyle: fontStyle);
 
   // BADGE TEXT FONTS
   static TextStyle badgeTextFont(Color color) =>

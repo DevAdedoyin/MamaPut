@@ -10,6 +10,7 @@ import 'package:mama_put/constants/text_constants.dart';
 import 'package:badges/badges.dart';
 import 'package:mama_put/data_set.dart';
 import 'package:mama_put/model.dart';
+import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 import 'package:mama_put/screens/home/home_widgets/recommended.dart';
@@ -76,9 +77,33 @@ class HomeScreen extends StatelessWidget {
                     SizeConstants.gapHeight(25),
                     Container(
                       margin: SizeConstants.spacing(15.0, 0.0),
-                      child: Text(
-                        'Menu',
-                        style: TextConstants.largeFont(),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Menu',
+                            style: TextConstants.largeFont(),
+                          ),
+                          InkWell(
+                            onTap: () => Navigator.pushNamed(
+                                context, Navigators.menuScreen),
+                            child: Card(
+                              color: ColorConstants.tertiaryColor,
+                              elevation: 2,
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: 70,
+                                height: 23,
+                                child: Text(
+                                  'See all',
+                                  style: TextConstants.smallFont(
+                                      ColorConstants.primaryColor,
+                                      fontStyle: FontStyle.italic),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizeConstants.gapHeight(2),
@@ -99,9 +124,29 @@ class HomeScreen extends StatelessWidget {
                     SizeConstants.gapHeight(25),
                     Container(
                       margin: SizeConstants.spacing(15.0, 0.0),
-                      child: Text(
-                        'Recommended',
-                        style: TextConstants.largeFont(),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Recommended',
+                            style: TextConstants.largeFont(),
+                          ),
+                          Card(
+                            color: ColorConstants.tertiaryColor,
+                            elevation: 2,
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 70,
+                              height: 23,
+                              child: Text(
+                                'See all',
+                                style: TextConstants.smallFont(
+                                    ColorConstants.primaryColor,
+                                    fontStyle: FontStyle.italic),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     SizeConstants.gapHeight(2),
