@@ -21,7 +21,7 @@ class RecommendedScreen extends StatelessWidget {
               return Container(
                 alignment: Alignment.center,
                 width: 150,
-                margin: SizeConstants.spacing(7.0, 5.0),
+                margin: SizeConstants.spacing(5.0, 10.0),
                 child: Banner(
                     message: '20% Off',
                     location: BannerLocation.topStart,

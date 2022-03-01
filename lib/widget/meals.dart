@@ -12,6 +12,7 @@ class MealWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: ColorConstants.backgroundColor,
+      shadowColor: ColorConstants.primaryColor,
       elevation: 10,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: Column(
