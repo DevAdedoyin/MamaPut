@@ -120,8 +120,14 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                 backgroundColor: ColorConstants.tertiaryColor,
               ),
             ),
-            SizeConstants.gapHeight(10),
-            
+            // SizeConstants.gapHeight(1),
+            Container(
+                margin: SizeConstants.spacing(10.0, 2.0),
+                child: Text(
+                  dataSET['meal']![index['index']]['name'],
+                  style: TextConstants.largeFont(
+                      color: ColorConstants.primaryColor),
+                )),
           ],
         ),
       ),
