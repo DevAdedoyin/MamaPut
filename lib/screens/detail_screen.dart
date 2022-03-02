@@ -24,7 +24,6 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(const Duration(milliseconds: 500), () {
       setState(() {
@@ -152,9 +151,6 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                       color: Colors.amber,
                     ),
                     onRatingUpdate: (rating) => print(rating),
-                    // onRatingUpdate: (rating) {
-                    //   print(rating);
-                    // },
                   ),
                   SizeConstants.gapWidth(5.0),
                   Text(

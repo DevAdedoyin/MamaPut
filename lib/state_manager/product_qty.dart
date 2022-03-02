@@ -12,7 +12,7 @@ class ProductQuantity extends ChangeNotifier {
   }
 
   _decreaseQuantity() {
-    _productQuantity--;
+    _productQuantity == 1 ? _productQuantity : _productQuantity--;
     notifyListeners();
   }
 
