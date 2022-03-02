@@ -22,7 +22,7 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
     super.initState();
     Timer(const Duration(milliseconds: 500), () {
       setState(() {
-        _height = 290;
+        _height = 310;
         _width = 270;
       });
     });
@@ -36,15 +36,16 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
         child: Column(
           children: [
             SizedBox(
-                height: 340,
+                height: 350,
                 child: Stack(
                   children: [
                     Container(
                       alignment: Alignment.topRight,
                       child: AnimatedContainer(
-                        decoration: const BoxDecoration(
-                            color: ColorConstants.secondaryColor,
-                            borderRadius: BorderRadius.only(
+                        decoration: BoxDecoration(
+                            color:
+                                ColorConstants.secondaryColor.withOpacity(0.5),
+                            borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(250))),
                         duration: const Duration(seconds: 1),
                         curve: Curves.linear,
@@ -74,9 +75,12 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           borderRadius: BorderRadius.circular(200),
                         ),
                         child: ClipOval(
-                          child: Image.asset(
-                            dataSET['meal']![index['index']]['image'],
-                            fit: BoxFit.cover,
+                          child: Hero(
+                            tag: 'meal',
+                            child: Image.asset(
+                              dataSET['meal']![index['index']]['image'],
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -103,7 +107,12 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           ),
                         ))
                   ],
-                ))
+                )),
+            SizedBox(
+              child: Chip(
+                  label:
+                      Text(dataSET['meal']![index['index']]['menu']['name'])),
+            )
           ],
         ),
       ),
