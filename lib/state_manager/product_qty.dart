@@ -6,14 +6,22 @@ class ProductQuantity extends ChangeNotifier {
 
   int get productQuantity => _productQuantity;
 
-  increaseQuantity() {
+  _increaseQuantity() {
     _productQuantity++;
     notifyListeners();
   }
 
-  decreaseQuantity() {
+  _decreaseQuantity() {
     _productQuantity--;
     notifyListeners();
+  }
+
+  increaseQuantity(WidgetRef ref) {
+    ref.read(changeProductQuantity)._increaseQuantity();
+  }
+
+  decreaseQuantity(WidgetRef ref) {
+    ref.read(changeProductQuantity)._decreaseQuantity();
   }
 }
 

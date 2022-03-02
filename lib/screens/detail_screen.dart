@@ -194,27 +194,34 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                         border: Border.all(
                             width: 1, color: ColorConstants.greyColor),
                         borderRadius: BorderRadius.circular(10)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        const Icon(
-                          Icons.remove,
-                          size: 20,
-                        ),
-                        Consumer(builder: (context, ref, _) {
-                          final quatity = ref.watch(changeProductQuantity);
-                          return Text(
+                    child: Consumer(builder: (context, ref, _) {
+                      final quatity = ref.watch(changeProductQuantity);
+                      final toggleQty = ref.read(changeProductQuantity);
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          InkWell(
+                            onTap: () => toggleQty.decreaseQuantity(ref),
+                            child: const Icon(
+                              Icons.remove,
+                              size: 20,
+                            ),
+                          ),
+                          Text(
                             quatity.productQuantity.toString(),
                             style: TextConstants.smallFont(
                                 ColorConstants.primaryColor),
-                          );
-                        }),
-                        const Icon(
-                          Icons.add,
-                          size: 20,
-                        ),
-                      ],
-                    ),
+                          ),
+                          InkWell(
+                            onTap: () => toggleQty.increaseQuantity(ref),
+                            child: const Icon(
+                              Icons.add,
+                              size: 20,
+                            ),
+                          ),
+                        ],
+                      );
+                    }),
                   ),
                   Text(
                     '#${dataSET['meal']![index['index']]['price']}.00',
