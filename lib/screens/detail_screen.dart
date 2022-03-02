@@ -156,10 +156,26 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                   Text(
                     '${dataSET['meal']![index['index']]['rating']}/5.0',
                     style: TextConstants.smallFont(ColorConstants.primaryColor),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
+            SizeConstants.gapHeight(15),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Text(
+                'Description',
+                style: TextConstants.mediumFont(ColorConstants.primaryColor),
+              ),
+            ),
+            SizeConstants.gapHeight(5),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Text(
+                '${dataSET['meal']![index['index']]['detail']}',
+                style: TextConstants.smallFont(ColorConstants.greyColor),
+              ),
+            ),
           ],
         ),
       ),
