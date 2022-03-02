@@ -25,7 +25,9 @@ class MealScreen extends StatelessWidget {
                   child: InkWell(
                     onTap: () => Navigator.pushNamed(
                         context, Navigators.detailScreen,
-                        arguments: {'index': counter}),
+                        arguments: {
+                          'index': counter,
+                        }),
                     child: MealWidget(
                       index: counter,
                     ),
