@@ -274,7 +274,8 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                   )
                 ],
               ),
-            )
+            ),
+            SizeConstants.gapHeight(20),
           ],
         ),
       ),

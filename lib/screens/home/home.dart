@@ -171,17 +171,22 @@ class HomeScreen extends StatelessWidget {
                             //     mealss.mealsList[index] as Map<String, dynamic>;
                             // Meals meals = Meals.fromJson(meal);
                             if (dataSET['meal']![index]['rating'] >= 4.7) {
-                              return Container(
-                                  alignment: Alignment.center,
-                                  width: 200,
-                                  margin: SizeConstants.spacing(7.0, 5.0),
-                                  child: Banner(
-                                    message: '20% Off',
-                                    location: BannerLocation.topStart,
-                                    child: RecommendedWidget(
-                                      index: index,
-                                    ),
-                                  ));
+                              return InkWell(
+                                onTap: () => Navigator.pushNamed(
+                                    context, Navigators.detailScreen,
+                                    arguments: {'index': index}),
+                                child: Container(
+                                    alignment: Alignment.center,
+                                    width: 200,
+                                    margin: SizeConstants.spacing(7.0, 5.0),
+                                    child: Banner(
+                                      message: '20% Off',
+                                      location: BannerLocation.topStart,
+                                      child: RecommendedWidget(
+                                        index: index,
+                                      ),
+                                    )),
+                              );
                             } else {
                               return Container();
                             }
