@@ -116,8 +116,13 @@ class HomeScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: menuList.length,
                           itemBuilder: (_, index) {
-                            return MenuCard(
-                              index: index,
+                            return InkWell(
+                              onTap: () => Navigator.pushNamed(
+                                  context, Navigators.mealScreen,
+                                  arguments: {'index': index}),
+                              child: MenuCard(
+                                index: index,
+                              ),
                             );
                           }),
                     ),
