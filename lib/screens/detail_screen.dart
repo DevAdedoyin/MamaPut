@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
@@ -122,12 +123,43 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
             ),
             // SizeConstants.gapHeight(1),
             Container(
-                margin: SizeConstants.spacing(10.0, 2.0),
+                margin: SizeConstants.spacing(10.0, 1.0),
                 child: Text(
                   dataSET['meal']![index['index']]['name'],
                   style: TextConstants.largeFont(
                       color: ColorConstants.primaryColor),
                 )),
+            SizeConstants.gapHeight(7),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Row(
+                children: [
+                  RatingBar.builder(
+                    initialRating: dataSET['meal']![index['index']]['rating'],
+                    glow: true,
+                    itemSize: 17,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    // itemPadding: EdgeInsets.symmetric(horizontal: 0.0),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) => print(rating),
+                    // onRatingUpdate: (rating) {
+                    //   print(rating);
+                    // },
+                  ),
+                  SizeConstants.gapWidth(5.0),
+                  Text(
+                    '${dataSET['meal']![index['index']]['rating']}/5.0',
+                    style: TextConstants.smallFont(ColorConstants.primaryColor),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
