@@ -21,11 +21,12 @@ class TextConstants {
   static TextStyle smallFont(Color color,
           {String? fontFamily, FontStyle? fontStyle}) =>
       TextStyle(
-          color: color,
-          fontSize: 15,
-          fontWeight: medium,
-          fontFamily: fontFamily,
-          fontStyle: fontStyle);
+        color: color,
+        fontSize: 15,
+        fontWeight: medium,
+        fontFamily: fontFamily,
+        fontStyle: fontStyle,
+      );
 
   // BADGE TEXT FONTS
   static TextStyle badgeTextFont(Color color) =>

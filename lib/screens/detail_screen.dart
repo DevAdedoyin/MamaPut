@@ -174,8 +174,81 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
               child: Text(
                 '${dataSET['meal']![index['index']]['detail']}',
                 style: TextConstants.smallFont(ColorConstants.greyColor),
+                textAlign: TextAlign.justify,
               ),
             ),
+            SizeConstants.gapHeight(15),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 80,
+                    height: 32,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                            width: 1, color: ColorConstants.greyColor),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const Icon(
+                          Icons.remove,
+                          size: 20,
+                        ),
+                        Text(
+                          '1',
+                          style: TextConstants.smallFont(
+                              ColorConstants.primaryColor),
+                        ),
+                        const Icon(
+                          Icons.add,
+                          size: 20,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Text(
+                    '#${dataSET['meal']![index['index']]['price']}.00',
+                    style: TextConstants.extraLargeFont(
+                        color: ColorConstants.primaryColor),
+                  )
+                ],
+              ),
+            ),
+            SizeConstants.gapHeight(30),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 280,
+                    height: 52,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Add to cart',
+                        style:
+                            TextConstants.smallFont(ColorConstants.whiteColor),
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              ColorConstants.primaryColor),
+                          shape:
+                              MaterialStateProperty.all(RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ))),
+                    ),
+                  ),
+                  const Icon(
+                    Icons.call,
+                    size: 27,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
