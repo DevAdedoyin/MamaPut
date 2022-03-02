@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/data_set.dart';
+import 'package:mama_put/navigators.dart';
 import 'package:mama_put/widget/app_bar.dart';
 import 'package:mama_put/widget/meals.dart';
 
@@ -21,8 +22,13 @@ class MealScreen extends StatelessWidget {
               if (dataSET['meal']![counter]['menu']['name'] == pageTitle) {
                 return Container(
                   margin: SizeConstants.spacing(0.0, 5.0),
-                  child: MealWidget(
-                    index: counter,
+                  child: InkWell(
+                    onTap: () => Navigator.pushNamed(
+                        context, Navigators.detailScreen,
+                        arguments: {'index': counter}),
+                    child: MealWidget(
+                      index: counter,
+                    ),
                   ),
                 );
               } else {
