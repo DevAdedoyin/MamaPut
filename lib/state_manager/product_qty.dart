@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ProductQuantity extends ChangeNotifier {
   int _productQuantity = 1;
@@ -15,3 +16,6 @@ class ProductQuantity extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+final changeProductQuantity =
+    ChangeNotifierProvider((ref) => ProductQuantity());

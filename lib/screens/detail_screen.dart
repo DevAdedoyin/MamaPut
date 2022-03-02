@@ -2,12 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
 import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
+import 'package:mama_put/state_manager/product_qty.dart';
 
 class MealDetailScreen extends StatefulWidget {
   const MealDetailScreen({Key? key}) : super(key: key);
@@ -199,11 +201,14 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           Icons.remove,
                           size: 20,
                         ),
-                        Text(
-                          '1',
-                          style: TextConstants.smallFont(
-                              ColorConstants.primaryColor),
-                        ),
+                        Consumer(builder: (context, ref, _) {
+                          final quatity = ref.watch(changeProductQuantity);
+                          return Text(
+                            quatity.productQuantity.toString(),
+                            style: TextConstants.smallFont(
+                                ColorConstants.primaryColor),
+                          );
+                        }),
                         const Icon(
                           Icons.add,
                           size: 20,
