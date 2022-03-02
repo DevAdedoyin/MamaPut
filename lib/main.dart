@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/model.dart';
@@ -11,7 +12,7 @@ import 'package:mama_put/screens/menu_screen.dart';
 import 'package:mama_put/screens/recommended_scree.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

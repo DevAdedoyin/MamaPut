@@ -33,6 +33,7 @@ dependencies:
   font_awesome_flutter:
   carousel_slider:
   flutter_rating_bar:
+  flutter_riverpod:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
