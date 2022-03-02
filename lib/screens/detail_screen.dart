@@ -6,6 +6,8 @@ import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
+import 'package:mama_put/navigators.dart';
+import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 
 class MealDetailScreen extends StatefulWidget {
   const MealDetailScreen({Key? key}) : super(key: key);
@@ -217,7 +219,31 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                 ],
               ),
             ),
-            SizeConstants.gapHeight(30),
+            SizeConstants.gapHeight(20),
+            Container(
+              margin: SizeConstants.spacing(10.0, 1.0),
+              child: Text(
+                'Check Complements',
+                style: TextConstants.mediumFont(ColorConstants.primaryColor),
+              ),
+            ),
+            SizeConstants.gapHeight(10),
+            SizedBox(
+              height: 180,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: menuList.length,
+                  itemBuilder: (_, index) => InkWell(
+                        onTap: () => Navigator.pushNamed(
+                            context, Navigators.mealScreen,
+                            arguments: {'index': index}),
+                        child: MenuCard(
+                          index: index,
+                        ),
+                      )),
+            ),
+            SizeConstants.gapHeight(20),
             Container(
               margin: SizeConstants.spacing(10.0, 1.0),
               child: Row(
