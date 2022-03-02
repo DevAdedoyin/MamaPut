@@ -3,6 +3,7 @@ import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
+import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 import 'package:mama_put/widget/app_bar.dart';
 
@@ -26,8 +27,12 @@ class MenuScreen extends StatelessWidget {
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 12),
             itemBuilder: (_, index) {
-              return MenuCard(
-                index: index,
+              return InkWell(
+                onTap: () => Navigator.pushNamed(context, Navigators.mealScreen,
+                    arguments: {'index': index}),
+                child: MenuCard(
+                  index: index,
+                ),
               );
             }),
       ),
