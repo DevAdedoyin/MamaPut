@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/size_constants.dart';
+import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
 
 class MealDetailScreen extends StatefulWidget {
@@ -34,6 +35,7 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
                 height: 350,
@@ -44,7 +46,7 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                       child: AnimatedContainer(
                         decoration: BoxDecoration(
                             color:
-                                ColorConstants.secondaryColor.withOpacity(0.5),
+                                ColorConstants.secondaryColor.withOpacity(0.7),
                             borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(250))),
                         duration: const Duration(seconds: 1),
@@ -108,11 +110,18 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                         ))
                   ],
                 )),
-            SizedBox(
+            Container(
+              margin: SizeConstants.spacing(10.0, 2.0),
               child: Chip(
-                  label:
-                      Text(dataSET['meal']![index['index']]['menu']['name'])),
-            )
+                label: Text(
+                  dataSET['meal']![index['index']]['menu']['name'],
+                  style: TextConstants.smallFont(ColorConstants.primaryColor),
+                ),
+                backgroundColor: ColorConstants.tertiaryColor,
+              ),
+            ),
+            SizeConstants.gapHeight(10),
+            
           ],
         ),
       ),
