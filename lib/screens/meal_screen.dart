@@ -19,8 +19,11 @@ class MealScreen extends StatelessWidget {
             itemCount: dataSET['meal']!.length,
             itemBuilder: (_, counter) {
               if (dataSET['meal']![counter]['menu']['name'] == pageTitle) {
-                return MealWidget(
-                  index: counter,
+                return Container(
+                  margin: SizeConstants.spacing(0.0, 5.0),
+                  child: MealWidget(
+                    index: counter,
+                  ),
                 );
               } else {
                 return Container();
