@@ -7,4 +7,5 @@ class Navigators {
   static const String recommendedScreen = 'recommended';
   static const String mealScreen = 'meals';
   static const String detailScreen = 'details';
+  static const String cartScreen = 'cart';
 }

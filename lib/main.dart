@@ -5,6 +5,7 @@ import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/model.dart';
 import 'package:mama_put/navigators.dart';
+import 'package:mama_put/screens/cart_screen.dart';
 import 'package:mama_put/screens/detail_screen.dart';
 import 'package:mama_put/screens/home/home.dart';
 import 'package:mama_put/screens/meal_screen.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         Navigators.recommendedScreen: (context) => const RecommendedScreen(),
         Navigators.mealScreen: (context) => const MealScreen(),
         Navigators.detailScreen: (context) => const MealDetailScreen(),
+        Navigators.cartScreen: (context) => const CartScreen(),
       },
     );
   }

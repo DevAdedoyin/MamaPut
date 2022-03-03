@@ -42,23 +42,26 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 17)),
         ])),
         actions: [
-          Badge(
-            position: BadgePosition.topEnd(top: 6, end: -3),
-            alignment: Alignment.center,
-            badgeColor: ColorConstants.primaryColor,
-            badgeContent: Consumer(builder: (context, ref, _) {
-              final cartItemQuantity =
-                  ref.read(cartItemProvider).cartItemQuantity;
-              return Text(
-                cartItemQuantity.toString(),
-                style:
-                    TextConstants.badgeTextFont(ColorConstants.backgroundColor),
-              );
-            }),
-            child: const Icon(
-              Icons.notifications,
-              color: ColorConstants.secondaryColor,
-              size: 25,
+          InkWell(
+            onTap: () => Navigator.pushNamed(context, Navigators.cartScreen),
+            child: Badge(
+              position: BadgePosition.topEnd(top: 6, end: -3),
+              alignment: Alignment.center,
+              badgeColor: ColorConstants.primaryColor,
+              badgeContent: Consumer(builder: (context, ref, _) {
+                final cartItemQuantity =
+                    ref.read(cartItemProvider).cartItemQuantity;
+                return Text(
+                  cartItemQuantity.toString(),
+                  style: TextConstants.badgeTextFont(
+                      ColorConstants.backgroundColor),
+                );
+              }),
+              child: const Icon(
+                Icons.notifications,
+                color: ColorConstants.secondaryColor,
+                size: 25,
+              ),
             ),
           ),
           SizeConstants.gapWidth(12)
