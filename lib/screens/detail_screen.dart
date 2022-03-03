@@ -289,6 +289,7 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                       return ElevatedButton(
                         onPressed: () {
                           ref.read(cartItemProvider).increaseItemQuantity(ref);
+                          ref.watch(changeProductQuantity).setProductQuantity();
                           Navigator.pushNamed(context, Navigators.homeScreen);
                         },
                         child: Text(

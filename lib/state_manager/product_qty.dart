@@ -6,6 +6,11 @@ class ProductQuantity extends ChangeNotifier {
 
   int get productQuantity => _productQuantity;
 
+  setProductQuantity() {
+    _productQuantity = 1;
+    notifyListeners();
+  }
+
   _increaseQuantity() {
     _productQuantity++;
     notifyListeners();
