@@ -1,4 +1,5 @@
 import 'dart:async';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -8,7 +9,9 @@ import 'package:mama_put/constants/size_constants.dart';
 import 'package:mama_put/constants/text_constants.dart';
 import 'package:mama_put/data_set.dart';
 import 'package:mama_put/navigators.dart';
+import 'package:mama_put/screens/home/home.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
+import 'package:mama_put/state_manager/cart.dart';
 import 'package:mama_put/state_manager/product_qty.dart';
 
 class MealDetailScreen extends StatefulWidget {
@@ -260,21 +263,26 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                   SizedBox(
                     width: 280,
                     height: 52,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Add to cart',
-                        style:
-                            TextConstants.smallFont(ColorConstants.whiteColor),
-                      ),
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              ColorConstants.primaryColor),
-                          shape:
-                              MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ))),
-                    ),
+                    child: Consumer(builder: (context, ref, _) {
+                      return ElevatedButton(
+                        onPressed: () {
+                          ref.read(cartItemProvider).increaseItemQuantity(ref);
+                          Navigator.pushNamed(context, Navigators.homeScreen);
+                        },
+                        child: Text(
+                          'Add to cart',
+                          style: TextConstants.smallFont(
+                              ColorConstants.whiteColor),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                ColorConstants.primaryColor),
+                            shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ))),
+                      );
+                    }),
                   ),
                   const Icon(
                     Icons.call,
