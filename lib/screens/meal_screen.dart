@@ -28,8 +28,12 @@ class MealScreen extends StatelessWidget {
                         arguments: {
                           'index': counter,
                         }),
-                    child: MealWidget(
-                      index: counter,
+                    child: Banner(
+                      message: '20% Off',
+                      location: BannerLocation.topStart,
+                      child: MealWidget(
+                        index: counter,
+                      ),
                     ),
                   ),
                 );
