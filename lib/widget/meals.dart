@@ -70,15 +70,22 @@ class MealWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizeConstants.gapHeight(3),
+                SizeConstants.gapHeight(4),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      '#${dataSET['meal']![index!]['price']}',
-                      style: TextConstants.extraLargeFont(
-                          color: ColorConstants.primaryColor),
-                    ),
+                    RichText(
+                        text: TextSpan(
+                            text: TextConstants.currency().currencySymbol,
+                            style: const TextStyle(
+                              color: ColorConstants.primaryColor,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            children: [
+                          TextSpan(
+                              text: '${dataSET['meal']![index!]['price']}.00')
+                        ])),
                     const Icon(
                       Icons.favorite,
                       color: ColorConstants.secondaryColor,

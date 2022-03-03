@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 import 'package:mama_put/constants/color_constants.dart';
 
 class TextConstants {
@@ -39,4 +42,11 @@ class TextConstants {
   // FONT FAMILY
   static const appTitleFamily = 'Pacifico';
   static const fontFamily = 'Oxygen';
+
+  //CURRENCY
+  static currency() {
+    var format =
+        NumberFormat.simpleCurrency(locale: Platform.localeName, name: 'NGN');
+    return format;
+  }
 }
