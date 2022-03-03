@@ -20,12 +20,9 @@ class MealWidget extends StatelessWidget {
           SizedBox(
             height: 200,
             width: double.maxFinite,
-            child: Hero(
-              tag: 'meal',
-              child: Image.asset(
-                dataSET['meal']![index!]['image'],
-                fit: BoxFit.cover,
-              ),
+            child: Image.asset(
+              dataSET['meal']![index!]['image'],
+              fit: BoxFit.cover,
             ),
           ),
           Container(

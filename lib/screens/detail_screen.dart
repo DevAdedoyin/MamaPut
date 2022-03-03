@@ -101,12 +101,9 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           borderRadius: BorderRadius.circular(200),
                         ),
                         child: ClipOval(
-                          child: Hero(
-                            tag: 'meal',
-                            child: Image.asset(
-                              dataSET['meal']![index['index']]['image'],
-                              fit: BoxFit.cover,
-                            ),
+                          child: Image.asset(
+                            dataSET['meal']![index['index']]['image'],
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
