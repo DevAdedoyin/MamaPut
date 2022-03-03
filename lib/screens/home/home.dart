@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mama_put/constants/color_constants.dart';
 import 'package:mama_put/constants/image_constants.dart';
@@ -14,6 +15,7 @@ import 'package:mama_put/navigators.dart';
 import 'package:mama_put/screens/home/home_widgets/banner.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 import 'package:mama_put/screens/home/home_widgets/recommended.dart';
+import 'package:mama_put/state_manager/cart.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -44,11 +46,15 @@ class HomeScreen extends StatelessWidget {
             position: BadgePosition.topEnd(top: 6, end: -3),
             alignment: Alignment.center,
             badgeColor: ColorConstants.primaryColor,
-            badgeContent: Text(
-              '3',
-              style:
-                  TextConstants.badgeTextFont(ColorConstants.backgroundColor),
-            ),
+            badgeContent: Consumer(builder: (context, ref, _) {
+              final cartItemQuantity =
+                  ref.read(cartItemProvider).cartItemQuantity;
+              return Text(
+                cartItemQuantity.toString(),
+                style:
+                    TextConstants.badgeTextFont(ColorConstants.backgroundColor),
+              );
+            }),
             child: const Icon(
               Icons.notifications,
               color: ColorConstants.secondaryColor,
