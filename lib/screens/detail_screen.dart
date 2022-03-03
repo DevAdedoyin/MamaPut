@@ -180,20 +180,20 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
             SizeConstants.gapHeight(15),
             Container(
               margin: SizeConstants.spacing(10.0, 1.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 80,
-                    height: 32,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            width: 1, color: ColorConstants.greyColor),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Consumer(builder: (context, ref, _) {
-                      final quatity = ref.watch(changeProductQuantity);
-                      final toggleQty = ref.read(changeProductQuantity);
-                      return Row(
+              child: Consumer(builder: (context, ref, _) {
+                final quatity = ref.watch(changeProductQuantity);
+                final toggleQty = ref.read(changeProductQuantity);
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 80,
+                      height: 32,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 1, color: ColorConstants.greyColor),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           InkWell(
@@ -205,7 +205,7 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                           ),
                           Text(
                             quatity.productQuantity.toString(),
-                            style: TextConstants.smallFont(
+                            style: TextConstants.mediumFont(
                                 ColorConstants.primaryColor),
                           ),
                           InkWell(
@@ -216,16 +216,16 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                             ),
                           ),
                         ],
-                      );
-                    }),
-                  ),
-                  Text(
-                    '#${dataSET['meal']![index['index']]['price']}.00',
-                    style: TextConstants.extraLargeFont(
-                        color: ColorConstants.primaryColor),
-                  )
-                ],
-              ),
+                      ),
+                    ),
+                    Text(
+                      '#${dataSET['meal']![index['index']]['price'] * quatity.productQuantity}.00',
+                      style: TextConstants.extraLargeFont(
+                          color: ColorConstants.primaryColor),
+                    )
+                  ],
+                );
+              }),
             ),
             SizeConstants.gapHeight(20),
             Container(
