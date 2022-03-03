@@ -1,21 +1,11 @@
+https://user-images.githubusercontent.com/59482569/156549891-f06c3927-5c76-4c05-8ffe-4a35562a432a.mp4
 
-# mama_put
+MamaPut Food Delivery App.
 
-A new Flutter project.
+MamaPut food delivery app is just a an app simulation of a day to day food delivery application. 
 
-## Getting Started
+I built this app just for the purpose of practice and for fun. 
 
-This project is a starting point for a Flutter application.
+No backend is involved.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-# MamaPut
-This is a restaurant app in which users can order there favorite meal
-
+State Management: Riverpod.
