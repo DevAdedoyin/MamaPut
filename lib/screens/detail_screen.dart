@@ -47,21 +47,14 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final index = ModalRoute.of(context)!.settings.arguments as Map;
-    currency(context) {
-      Locale locale = Localizations.localeOf(context);
+    currency() {
+      // Locale locale = Localizations.localeOf(context);
       var format =
           NumberFormat.simpleCurrency(locale: Platform.localeName, name: 'NGN');
       return format;
       // print("CURRENCY SYMBOL ${format.currencySymbol}"); // N
       // print("CURRENCY NAME ${format.currencyName}"); // NGN
     }
-
-    // String getCurrency() {
-    //   var format = NumberFormat.simpleCurrency(locale: Platform.localeName);
-    //   return format.currencySymbol;
-    // }
-
-    // print(getCurrency());
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -247,11 +240,11 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                     ),
                     RichText(
                         text: TextSpan(
-                            text: currency(context).currencySymbol,
+                            text: currency().currencySymbol,
                             style: const TextStyle(
-                              color: ColorConstants.primaryColor,
+                              color: ColorConstants.secondaryColor,
                               fontSize: 22,
-                              // fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.bold,
                             ),
                             children: [
                           TextSpan(
