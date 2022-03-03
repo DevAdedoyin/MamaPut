@@ -78,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         options: CarouselOptions(
                           aspectRatio: 7 / 8,
-                          autoPlayInterval: const Duration(milliseconds: 500),
+                          autoPlayInterval: const Duration(seconds: 2),
                           autoPlay: true,
                         )),
                     SizeConstants.gapHeight(25),
