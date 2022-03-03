@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -13,6 +14,7 @@ import 'package:mama_put/screens/home/home.dart';
 import 'package:mama_put/screens/home/home_widgets/menu_card.dart';
 import 'package:mama_put/state_manager/cart.dart';
 import 'package:mama_put/state_manager/product_qty.dart';
+import 'package:intl/intl.dart';
 
 class MealDetailScreen extends StatefulWidget {
   const MealDetailScreen({Key? key}) : super(key: key);
@@ -36,9 +38,31 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
     });
   }
 
+  String getCurrency() {
+    var format =
+        NumberFormat.simpleCurrency(locale: Platform.localeName, name: 'NGN');
+    return format.currencySymbol;
+  }
+
   @override
   Widget build(BuildContext context) {
     final index = ModalRoute.of(context)!.settings.arguments as Map;
+    currency(context) {
+      Locale locale = Localizations.localeOf(context);
+      var format =
+          NumberFormat.simpleCurrency(locale: Platform.localeName, name: 'NGN');
+      return format;
+      // print("CURRENCY SYMBOL ${format.currencySymbol}"); // N
+      // print("CURRENCY NAME ${format.currencyName}"); // NGN
+    }
+
+    // String getCurrency() {
+    //   var format = NumberFormat.simpleCurrency(locale: Platform.localeName);
+    //   return format.currencySymbol;
+    // }
+
+    // print(getCurrency());
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -221,11 +245,19 @@ class _MealDetailScreenState extends State<MealDetailScreen> {
                         ],
                       ),
                     ),
-                    Text(
-                      '#${dataSET['meal']![index['index']]['price'] * quatity.productQuantity}.00',
-                      style: TextConstants.extraLargeFont(
-                          color: ColorConstants.primaryColor),
-                    )
+                    RichText(
+                        text: TextSpan(
+                            text: currency(context).currencySymbol,
+                            style: const TextStyle(
+                              color: ColorConstants.primaryColor,
+                              fontSize: 22,
+                              // fontWeight: FontWeight.bold,
+                            ),
+                            children: [
+                          TextSpan(
+                              text:
+                                  '${dataSET['meal']![index['index']]['price'] * quatity.productQuantity}.00')
+                        ])),
                   ],
                 );
               }),
