@@ -51,10 +51,12 @@ final mealss = MealsList.fromJson(dataSET);
 
 class RecommendedMeals {
   static List<Widget> meals = [];
+  static List<int> indexes = [];
 
   static recommendedMeals() {
     for (int i = 0; i < dataSET['meal']!.length; i++) {
       if (dataSET['meal']![i]['rating'] >= 4.7) {
+        indexes.add(i);
         meals.add(MealWidget(
           index: i,
         ));

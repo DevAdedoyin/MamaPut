@@ -120,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          itemCount: menuList.length,
+                          itemCount: 4,
                           itemBuilder: (_, index) {
                             return InkWell(
                               onTap: () => Navigator.pushNamed(
@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                             );
                           }),
                     ),
-                    SizeConstants.gapHeight(25),
+                    SizeConstants.gapHeight(20),
                     Container(
                       margin: SizeConstants.spacing(15.0, 0.0),
                       child: Row(
@@ -171,7 +171,7 @@ class HomeScreen extends StatelessWidget {
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          itemCount: dataSET['meal']!.length,
+                          itemCount: 20,
                           itemBuilder: (_, index) {
                             // Map<String, dynamic> meal =
                             //     mealss.mealsList[index] as Map<String, dynamic>;
